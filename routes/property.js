@@ -4,6 +4,9 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
     const property = await Property.find();
+    if (property.length === 0) {
+        return res.status(400).json({message: "No properties found"});
+    }
     try {
         return res.status(200).json(property)
     } catch (error) {
