@@ -5,9 +5,9 @@ const router = express.Router();
 router.get('/', async (req, res) => {
     const property = await Property.find();
     try {
-        if (property.length === 0) {
+        /*if (property.length === 0) {
             return res.status(400).json({message: "No properties found"});
-        }
+        }*/
         return res.status(200).json(property)
     } catch (error) {
         return res.status(500).json({ message: "couldn't find" })
@@ -26,11 +26,12 @@ router.get('/property/:id', async (req, res) => {
 });
 
 router.post("/property", async (req, res) => {
-    const propertyToCreate = await Property.create(req.body);
+    
     try {
+        const propertyToCreate = await Property.create(req.body);
         return res.status(201).json(propertyToCreate);
     } catch (error) {
-        return res.status(500).json({ message: "Couldn't create" });
+        return res.status(500).json({ message: "Couldn't create", error });
     }
 });
 

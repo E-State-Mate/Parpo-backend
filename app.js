@@ -20,10 +20,8 @@ app.use(express.json());
 app.use("/api/auth", require("./routes/user"));
 app.use("/api/properties", require('./routes/property'));
 
-
 // start listening on server
 const port = process.env.PORT;
 app.listen(port, () => {
-    console.log("Server running...");
+    console.log("Server running on port", port);
 })
-
