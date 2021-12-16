@@ -1,6 +1,25 @@
 const mongoose = require('mongoose');
 const { model, Schema } = mongoose;
 
+const CarouselSchema = Schema({
+    url: {
+        type: String,
+        required: true
+    },
+    title: {
+        type: String,
+        required: true
+    },
+    label: {
+        type: String,
+        required: true
+    },
+    text: {
+        type: String,
+        required: true
+    }
+});
+
 const PropertySchema = Schema(
     {
     //Building Information
@@ -37,6 +56,14 @@ const PropertySchema = Schema(
             required: true,
         },
         bSize:{
+            type: Number,
+            required: true,
+        },
+        floorNumber:{
+            type: Number,
+            required: true,
+        },
+        floorPlate:{
             type: Number,
             required: true,
         },
@@ -97,6 +124,14 @@ const PropertySchema = Schema(
             type: String,
             required: true,
         },
+        carousel: {
+            type: [CarouselSchema],
+            required: false,
+        }
+        //Carousel objects
+        // -3 images
+        // -3 title text
+        // -3 subtexts
 
         //Building Size: number
         //Oportunity {true,false} {checkbox}
