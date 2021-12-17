@@ -4,19 +4,19 @@ const { model, Schema } = mongoose;
 const CarouselSchema = Schema({
     url: {
         type: String,
-        required: true
+        required: false
     },
     title: {
         type: String,
-        required: true
+        required: false
     },
     label: {
         type: String,
-        required: true
+        required: false
     },
     text: {
         type: String,
-        required: true
+        required: false
     }
 });
 
@@ -25,61 +25,61 @@ const PropertySchema = Schema(
     //Building Information
         name: {
             type: String, 
-            required: true
+            required: false
         }, 
         address: {
             type: String,
-            required: true,
+            required: false,
         }, 
         price: { 
             type: Number, 
-            required: true
+            required: false
         },
         irr:{
             type: Number,
-            required: true
+            required: false
         },
         bldgRating:{
             type: String,
-            required: true,
+            required: false,
         },
         bldgCredit:{
             type: String,
-            required: true,
+            required: false,
         },
         yearBuilt: {
             type: String,
-            required: true,
+            required: false,
         },
         propertyType:{
             type: String,
-            required: true,
+            required: false,
         },
         bSize:{
             type: Number,
-            required: true,
+            required: false,
         },
         floorNumber:{
             type: Number,
-            required: true,
+            required: false,
         },
         floorPlate:{
             type: Number,
-            required: true,
+            required: false,
         },
         imageUrl: {
             type: String, 
-            required: true,
+            required: false,
         },
         opportunity:{
             type: Boolean,
-            required: true,
+            required: false,
         },
 
 // Tenant Information
         tenantOccupancy:{
             type: Number,
-            required: true,
+            required: false,
         },
         tenantSingleMulti:{
             type: String,
@@ -99,7 +99,7 @@ const PropertySchema = Schema(
             type: String,
             require: true,
         },
-        parkingRation: {
+        parkingRatio: {
             type: String,
             require: true,
         },
@@ -110,19 +110,19 @@ const PropertySchema = Schema(
 // Holder Information
         holder: {
             type: String,
-            required: true,
+            required: false,
         }, 
         mPartner: {
             type: String,
-            required: true,
+            required: false,
         }, 
         hPhone: {
             type: Number,
-            required: true,
+            required: false,
         },
         hEmail: {
             type: String,
-            required: true,
+            required: false,
         },
         carousel: {
             type: [CarouselSchema],
