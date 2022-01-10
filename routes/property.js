@@ -48,6 +48,7 @@ router.put('/property/:id', async (req, res) => {
     }
 });
 
+//Delete Function
 
 router.delete("/property/:id", async (req, res) => {
     const { id } = req.params;
