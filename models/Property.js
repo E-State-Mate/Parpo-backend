@@ -22,7 +22,7 @@ const CarouselSchema = Schema({
 
 const PropertySchema = Schema(
     {
-    //Building Information
+    //Building Informations
         name: {
             type: String, 
             required: false
@@ -126,6 +126,11 @@ const PropertySchema = Schema(
         },
         carousel: {
             type: [CarouselSchema],
+            required: false,
+        },
+        // Test Values
+        addValue: {
+            type: [addValue],
             required: false,
         }
         //Carousel objects
