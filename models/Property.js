@@ -92,7 +92,7 @@ const PropertySchema = Schema(
         leaseEndDate: {
             type: String,
             require: true,
-        },
+        },,
 
 //Parking Information
         parkingSpaces: {
