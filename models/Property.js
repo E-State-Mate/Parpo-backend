@@ -92,7 +92,7 @@ const PropertySchema = Schema(
         leaseEndDate: {
             type: String,
             require: true,
-        },,
+        },
 
 //Parking Information
         parkingSpaces: {
@@ -128,7 +128,6 @@ const PropertySchema = Schema(
             type: [CarouselSchema],
             required: false,
         }
-        addValue: 
         //Carousel objects
         // -3 images
         // -3 title text
