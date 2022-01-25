@@ -127,7 +127,7 @@ const PropertySchema = Schema(
         carousel: {
             type: [CarouselSchema],
             required: false,
-        },
+        },,
         //Carousel objects
         // -3 images
         // -3 title text
