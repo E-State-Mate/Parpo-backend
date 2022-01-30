@@ -10,6 +10,10 @@ const CarouselSchema = Schema({
         type: String,
         required: false
     },
+    title: {
+        type: String,
+        required: false
+    },
     label: {
         type: String,
         required: false
